@@ -1,0 +1,34 @@
+@import "../node_modules/jsxgraph/distrib/jsxgraph.css";
+@import "tailwindcss";
+
+.jxgbox {
+  background-color: transparent !important;
+  border: none !important;
+}
+.jxgbox .JXGtext, 
+.jxgbox text, 
+.jxgbox div[class^="JXG"] {
+  color: #f8fafc !important;
+  fill: #f8fafc !important;
+}
+
+.jxgbox .JXGtext {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 11px !important;
+  font-weight: 650 !important;
+  text-shadow: 
+    -1px -1px 0 rgba(0, 0, 0, 0.9),  
+     1px -1px 0 rgba(0, 0, 0, 0.9),
+    -1px  1px 0 rgba(0, 0, 0, 0.9),
+     1px  1px 0 rgba(0, 0, 0, 0.9),
+     0px 1px 4px rgba(0, 0, 0, 0.95) !important;
+  letter-spacing: -0.015em !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

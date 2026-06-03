@@ -1,0 +1,100 @@
+[
+  {
+    "id": "transitive_equality",
+    "name": "Transitive Property of Equality",
+    "description": "If A=B and B=C, then A=C",
+    "trigger_signature": ["Equal"],
+    "derived_truths_schema": ["Equal(A, C)"]
+  },
+  {
+    "id": "reflexive_property",
+    "name": "Reflexive Property",
+    "description": "Any geometric figure is congruent to itself. A=A",
+    "trigger_signature": ["Point", "Line", "Angle"],
+    "derived_truths_schema": ["Equal(A, A)"]
+  },
+  {
+    "id": "symmetric_equality",
+    "name": "Symmetric Property of Equality",
+    "description": "If A=B, then B=A",
+    "trigger_signature": ["Equal"],
+    "derived_truths_schema": ["Equal(B, A)"]
+  },
+  {
+    "id": "segment_addition",
+    "name": "Segment Addition Postulate",
+    "description": "If B is between A and C, then AB + BC = AC",
+    "trigger_signature": ["Line", "Collinear"],
+    "derived_truths_schema": ["Equation(AB + BC = AC)"]
+  },
+  {
+    "id": "angle_addition",
+    "name": "Angle Addition Postulate",
+    "description": "If D is in the interior of Angle ABC, then Angle ABD + Angle DBC = Angle ABC",
+    "trigger_signature": ["Angle"],
+    "derived_truths_schema": ["Equation(Angle_ABD + Angle_DBC = Angle_ABC)"]
+  },
+  {
+    "id": "linear_pair",
+    "name": "Linear Pair Postulate",
+    "description": "If two angles form a linear pair, they are supplementary.",
+    "trigger_signature": ["Angle", "Line"],
+    "derived_truths_schema": ["Equation(Angle_1 + Angle_2 = 180)"]
+  },
+  {
+    "id": "vertical_angles",
+    "name": "Vertical Angles Theorem",
+    "description": "Vertical angles are equal in measure.",
+    "trigger_signature": ["Angle", "Intersection"],
+    "derived_truths_schema": ["Equal(Angle_1, Angle_2)"]
+  },
+  {
+    "id": "corresponding_angles",
+    "name": "Corresponding Angles Postulate",
+    "description": "If two parallel lines are cut by a transversal, then corresponding angles are equal.",
+    "trigger_signature": ["Parallel", "Angle"],
+    "derived_truths_schema": ["Equal(Angle_1, Angle_2)"]
+  },
+  {
+    "id": "alternate_interior_angles",
+    "name": "Alternate Interior Angles Theorem",
+    "description": "If two parallel lines are cut by a transversal, alternate interior angles are equal.",
+    "trigger_signature": ["Parallel", "Angle"],
+    "derived_truths_schema": ["Equal(Angle_1, Angle_2)"]
+  },
+  {
+    "id": "triangle_angle_sum",
+    "name": "Triangle Angle Sum",
+    "description": "Sum of interior angles of a triangle is 180 degrees.",
+    "trigger_signature": ["Triangle"],
+    "derived_truths_schema": ["Equation(Angle_1 + Angle_2 + Angle_3 = 180)"]
+  },
+  {
+    "id": "isosceles_theorem",
+    "name": "Isosceles Base Angles Theorem",
+    "description": "If two sides of a triangle are equal, the angles opposite those sides are equal.",
+    "trigger_signature": ["Triangle", "Equal"],
+    "derived_truths_schema": ["Isosceles(ABC)", "Equal(Angle_B, Angle_C)"]
+  },
+  {
+    "id": "sas_congruence",
+    "name": "SAS Congruence Postulate",
+    "description": "If two sides and the included angle of one triangle are congruent to two sides and the included angle of another, the triangles are congruent.",
+    "trigger_signature": ["Triangle", "Equal"],
+    "derived_truths_schema": ["Congruent(T1, T2)", "Equal(All_Corresponding_Parts)"]
+  },
+  {
+    "id": "sss_congruence",
+    "name": "SSS Congruence Postulate",
+    "description": "If three sides of one triangle are congruent to three sides of another, the triangles are congruent.",
+    "trigger_signature": ["Triangle", "Equal"],
+    "derived_truths_schema": ["Congruent(T1, T2)", "Equal(All_Corresponding_Parts)"]
+  },
+  {
+    "id": "asa_congruence",
+    "name": "ASA Congruence Postulate",
+    "description": "If two angles and the included side of one triangle are congruent to two angles and the included side of another, the triangles are congruent.",
+    "trigger_signature": ["Triangle", "Equal"],
+    "derived_truths_schema": ["Congruent(T1, T2)", "Equal(All_Corresponding_Parts)"]
+  }
+]

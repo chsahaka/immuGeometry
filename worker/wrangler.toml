@@ -1,0 +1,8 @@
+name = "immu-gemini-proxy"
+main = "src/index.ts"
+compatibility_date = "2023-10-30"
+
+[vars]
+# Change this to your GitHub pages URL, e.g. "https://username.github.io"
+# Leave as "*" for public access, but restricting is recommended!
+CORS_ORIGIN = "*"
