@@ -296,9 +296,9 @@ sequenceDiagram
     Ca->>Ca: Computes State Hash
     Ca->>Ca: Queries localStorage cache DB
     
-    alt Experience cache hit!
-        Ca-->>App: Bypasses inference; immediately maps canonical variables
-    else Experience cache miss!
+    alt Cache Hit
+        Ca-->>App: Bypasses inference, immediately maps canonical variables
+    else Cache Miss
         Note over App, Det: pass 3: Deterministic Prover Race
         App->>Det: Launces Parallel Race: AnalyticSolver vs BidirectionalPermutationEngine
         
@@ -310,7 +310,7 @@ sequenceDiagram
             Det->>Det: Computes Wu's method pseudo-division using nerdamer
         end
 
-        Det-->>App: Whichever solver finishes first with remainder 0 wins!
+        Det-->>App: Whichever solver finishes first with remainder 0 wins
         App->>Ca: Saves proven canonical proof chain to cache
     end
 
